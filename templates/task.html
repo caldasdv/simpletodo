@@ -1,0 +1,13 @@
+<div id="todo-{{.id}}" class="todo-item">
+    <p>
+        <strong>{{.title}}</strong> - <span class="status">{{.status}}</span>
+        <button
+            hx-delete="/todos/{{.id}}"
+            hx-target="#todo-{{.id}}"
+            hx-swap="outerHTML"
+            class="delete-btn"
+        >
+            Delete
+        </button>
+    </p>
+</div>
